@@ -1,0 +1,51 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: monospace;
+	background-color: #DBD7D2;
+}
+
+.content_wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	width: 100%;
+}
+
+.content_wrap .content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 25%;
+	width: 35%;
+}
+
+.content .startgame_button {
+	width: 512px;
+	height: 512px;
+}
+
+.startgame_button img {
+	transition: .1s ease-in;
+}
+
+.content .gamelink {
+	color: #A5A5A5;
+	font-weight: 600;
+	font-size: 16pt;
+	text-decoration: none;
+	transition: .1s ease;
+}
+
+.startgame_button img:hover{
+	transform: scale(.9,.9);
+}
+
+.gamelink:hover {
+	transform: scale(1.1, 1.1);
+}
