@@ -138,24 +138,24 @@ class GameAct {
 					do {
 						switch(+prompt(this.texts[i].content)) {
 							case 1: {
-								if (!check_limit()) {
+								//if (!check_limit()) {
 									this.texts[i].reaction1();
 									check = false;
-								}
+								//}
 								break;
 							}
 							case 2: {
-								if (!check_limit()) {
+								//if (!check_limit()) {
 									this.texts[i].reaction2();
 									check = false;
-								}
+								//}
 								break;
 							}
 							case 3: {
-								if (!check_limit()) {
+								//if (!check_limit()) {
 									this.texts[i].reaction3();
 									check = false;
-								}
+								//}
 								break;
 							}
 							case 4: {
@@ -178,17 +178,17 @@ class GameAct {
 					do {
 						switch(confirm(this.texts[i].content)) {
 							case true: {
-								if (!check_limit()) {
+								//if (!check_limit()) {
 									this.texts[i].reaction1();
 									check = false;
-								}
+								//}
 								break;
 							}
 							case false: {
-								if (!check_limit()) {
+								//if (!check_limit()) {
 									this.texts[i].reaction2();
 									check = false;
-								}
+								//}
 								break;
 							}
 							default: {
@@ -245,7 +245,7 @@ function check_if_dead() {
 }
 
 // Проверка на то, превышен ли лимит значения навыка у персонажа или же нет
-function check_limit(){
+/*function check_limit(){ <-- В разработке.
 	if (Character.hp > 6) {
 		alert('Кажется, я настолько здоров, что хоть отправь меня на Марс — проживу там всю жизнь. Не думаю, что смогу стать ещё более здоровым.');
 		Character.hp = 6;
@@ -261,7 +261,7 @@ function check_limit(){
 	} else {
 		return false;
 	}
-}
+}*/
 
 // Подтверждение начала игры
 function game_confirmation(confirmation = confirm('Действительно ли Вы желаете начать игру?')) {
@@ -303,7 +303,7 @@ function start_game() {
 	
 	Character = new GamePerson({
 	name: "Василий П.",
-	hp: 6,
+	hp: 3,
 	str: 2,
 	dex: 2,
 	karma: 0,
@@ -500,7 +500,7 @@ function start_game() {
 			},
 			{
 				type: "text",
-				content: ""
+				content: "Спасибо за прохождение третьего акта игры! Emergency Situation (в т.ч. и Legacy) находится в состоянии ранней разработки и постоянно дорабатывается. Следите за обновлениями на странице игры в Github, чтобы не пропустить изменения!"
 			}
 		]
 	});
