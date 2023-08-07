@@ -1,51 +1,71 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
 	font-family: monospace;
 	background-color: #DBD7D2;
+	height: 100dvh;
+	width: 100dvw;
 }
 
-.content_wrap {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	width: 100%;
-}
-
-.content_wrap .content {
+.content {
+	position: fixed;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	height: 25%;
-	width: 35%;
+	gap: 2rem;
+	width: 100%;
+	height: 100%;
+	padding: 1rem;
 }
 
 .content .startgame_button {
-	width: 512px;
-	height: 512px;
-}
-
-.startgame_button img {
+	width: 40rem;
+	height: 40rem;
+	background: url("../imgs/startbutton.svg") center center no-repeat;
+	background-attachment: cover;
 	transition: .1s ease-in;
+	cursor: pointer;
 }
 
 .content .gamelink {
 	color: #A5A5A5;
 	font-weight: 600;
-	font-size: 16pt;
+	font-size: 20pt;
 	text-decoration: none;
 	transition: .1s ease;
 }
 
-.startgame_button img:hover{
+.startgame_button:hover{
 	transform: scale(.9,.9);
 }
 
 .gamelink:hover {
 	transform: scale(1.1, 1.1);
+}
+
+@media screen and (max-width: 1100px) {
+	.content .startgame_button {
+		width: 30rem;
+		height: 30rem;
+	}
+	
+	.content .gamelink {
+		font-size: 16pt;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.content .startgame_button {
+		width: 17.5rem;
+		height: 17.5rem;
+	}
+	
+	.content .gamelink {
+		font-size: 14pt;
+	}
 }
